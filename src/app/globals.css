@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --poppins: "Poppins", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
