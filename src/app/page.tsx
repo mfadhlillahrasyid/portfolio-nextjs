@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Navbar from "./components/navbar";
 import About from "./base/about";
+import Skills from "./base/skills";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center">
             <div className="max-w-md">
-              <h1 className="text-5xl leading-tight font-bold">
+              <h1 className="text-3xl lg:text-5xl lg:leading-tight font-bold">
                 Muhammad Fadhlillah Rasyid
               </h1>
               <p className="py-6 text-lg leading-snug">
@@ -43,6 +44,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Skiils */}
+      <Skills />
 
       {/* About Section */}
       <About />

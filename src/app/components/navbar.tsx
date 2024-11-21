@@ -1,8 +1,22 @@
 "use client";
 
+interface MenuNavbar {
+  id: number;
+  title: string;
+  url: string;
+}
+
+const menu: MenuNavbar[] = [
+  { id: 1, title: "Home", url: "/" },
+  { id: 2, title: "About", url: "/about" },
+  { id: 3, title: "Skills", url: "/skills" },
+  { id: 4, title: "Portfolio", url: "/portfolio" },
+  { id: 5, title: "Contact", url: "/contact" }
+];
+
 export default function Navbar() {
   return (
-    <div className="navbar bg-base-100 sticky top-0 z-99 font-sans">
+    <div className="navbar bg-base-100 sticky top-0 z-50 font-sans">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -25,15 +39,11 @@ export default function Navbar() {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Homepage</a>
-            </li>
-            <li>
-              <a>Portfolio</a>
-            </li>
-            <li>
-              <a>About</a>
-            </li>
+            {menu.map((navbar) => (
+              <li key={navbar.id}>
+                <a href={navbar.url}>{navbar.title}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
